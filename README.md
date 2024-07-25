@@ -27,6 +27,7 @@ Database Integration and Web Development:
 Integrating a NoSQL database (MongoDB) with the Java application, performing CRUD operations using the MongoDB Java driver.
 Setting up a Spring Boot application and creating RESTful APIs to interact with the MongoDB database.
 Developing a web-based interface using HTML/CSS and JavaScript (or a framework like React) to interact with the backend APIs.
+
 How do the specific skills you will demonstrate align with your career plans related to your degree?
 The specific skills I will demonstrate through these enhancements align closely with my career plans related to my degree in several ways:
 
