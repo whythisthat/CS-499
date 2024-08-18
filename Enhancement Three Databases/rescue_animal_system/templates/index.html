@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rescue Animal System</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <div class="container mt-5">
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to the Rescue Animal System</h1>
+        <p class="lead">Your go-to solution for managing rescue animals efficiently and compassionately.</p>
+        <hr class="my-4">
+        <p>Our system helps you intake, manage, and reserve rescue animals with ease.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('intake_options') }}" role="button">Intake an Animal</a>
+      </div>
+      
+      <div class="mission-statement text-center mt-5">
+        <h2>Our Mission</h2>
+        <p class="lead">At Rescue Animal System, our mission is to provide a comprehensive, compassionate, and efficient platform for managing rescue animals. We strive to ensure every animal gets the care they deserve and a chance to find their forever home. Our goal is to support rescue organizations by simplifying the intake process, improving animal management, and facilitating successful adoptions.</p>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

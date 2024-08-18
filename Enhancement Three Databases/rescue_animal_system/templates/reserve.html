@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Reserve an Animal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Reserve an Animal</h1>
+      <div class="row">
+        {% for animal in animals %}
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <img src="{{ url_for('static', filename='images/' ~ animal.animal_type ~ '.jpg') }}" class="card-img-top" alt="{{ animal.animal_type }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ animal.name }}</h5>
+              <p class="card-text"><strong>Type:</strong> {{ animal.animal_type }}</p>
+              <p class="card-text"><strong>Gender:</strong> {{ animal.gender }}</p>
+              <p class="card-text"><strong>Age:</strong> {{ animal.age }}</p>
+              <p class="card-text"><strong>Weight:</strong> {{ animal.weight }}</p>
+              <p class="card-text"><strong>Acquisition Date:</strong> {{ animal.acquisition_date }}</p>
+              <p class="card-text"><strong>Acquisition Country:</strong> {{ animal.acquisition_country }}</p>
+              <p class="card-text"><strong>Training Status:</strong> {{ animal.training_status }}</p>
+              <p class="card-text"><strong>Reserved:</strong> {{ animal.reserved }}</p>
+              <p class="card-text"><strong>In Service Country:</strong> {{ animal.in_service_country }}</p>
+              <a href="{{ url_for('reserve_animal', animal_id=animal._id) }}" class="btn btn-primary">Reserve</a>
+              <a href="{{ url_for('edit_animal', animal_id=animal._id) }}" class="btn btn-secondary">Edit</a>
+              <form action="{{ url_for('delete_animal', animal_id=animal._id) }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <a href="/" class="btn btn-link mt-4">Back to main menu</a>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

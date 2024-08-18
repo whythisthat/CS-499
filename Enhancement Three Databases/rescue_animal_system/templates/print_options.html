@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Print Options</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Print Options</h1>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print Dogs</h5>
+              <p class="card-text">Print a list of all dogs in the system.</p>
+              <a href="{{ url_for('print_animal_list', animal_type='dog') }}" class="btn btn-primary">Print Dogs</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print Monkeys</h5>
+              <p class="card-text">Print a list of all monkeys in the system.</p>
+              <a href="{{ url_for('print_animal_list', animal_type='monkey') }}" class="btn btn-primary">Print Monkeys</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print Birds</h5>
+              <p class="card-text">Print a list of all birds in the system.</p>
+              <a href="{{ url_for('print_animal_list', animal_type='bird') }}" class="btn btn-primary">Print Birds</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print Reptiles</h5>
+              <p class="card-text">Print a list of all reptiles in the system.</p>
+              <a href="{{ url_for('print_animal_list', animal_type='reptile') }}" class="btn btn-primary">Print Reptiles</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print Available Animals</h5>
+              <p class="card-text">Print a list of all available animals that are not reserved.</p>
+              <a href="{{ url_for('print_available_animals') }}" class="btn btn-primary">Print Available Animals</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card bordered-card">
+            <div class="card-body">
+              <h5 class="card-title">Print All Animals</h5>
+              <p class="card-text">Print a list of all animals in the system.</p>
+              <a href="{{ url_for('print_all_animals') }}" class="btn btn-primary">Print All Animals</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="/" class="btn btn-link mt-4">Back to main menu</a>
+    </div>
+    {% include 'footer.html' %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
